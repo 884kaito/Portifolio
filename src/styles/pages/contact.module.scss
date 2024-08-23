@@ -1,4 +1,8 @@
-.contact-conteiner{
-    // display: grid;
-    gap: 2em;
+.buttonConteiner{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.6em;
+
+    margin-top: 2em;
 }

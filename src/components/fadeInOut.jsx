@@ -1,6 +1,6 @@
 import { useEffect, useImperativeHandle, forwardRef } from "react";
 import { useNavigate } from 'react-router-dom';
-import styles from "../styles/components/fadeInOut.module.css";
+import styles from "../styles/components/fadeInOut.module.scss";
 
 export const FadeInOut = forwardRef((props, ref) => {
 

@@ -1,4 +1,4 @@
-import styles from "../styles/pages/home.module.css";
+import styles from "../styles/pages/home.module.scss";
 import {Button} from "../components/button";
 import {FadeInOut} from "../components/fadeInOut";
 import { useEffect, useState, useRef } from "react";
