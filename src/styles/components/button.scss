@@ -1,0 +1,88 @@
+@use "default" as *;
+
+
+.default-button{
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+
+    font-family: "Italiana", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5em;
+    text-align: center;
+    color: $textColor;
+
+    background-color: #00000000;
+    border: none;
+
+    text-shadow: none;
+    transition: text-shadow 0.2s, transform 0.4s;
+
+    & .appear-element{
+        margin: 10px;
+        width: 2em;
+        display: inline-block;
+        animation: button-side-anim-back 0.2s;
+        animation-fill-mode: both;
+    }
+
+    &:hover{
+        text-shadow: rgb(255, 255, 255) 0px 0 10px;
+        transform: translate(0, -1px);
+        & .appear-element{
+            animation: button-side-hover-anim 0.4s;
+            animation-fill-mode: both;
+        }
+    }
+
+    &.clicked{
+        pointer-events: none;
+        text-shadow: none;
+
+        & .appear-element{
+            animation: button-side-click-anim 0.4s;
+            animation-fill-mode: both;
+        }
+    }
+}
+
+@keyframes button-side-hover-anim {
+    0%{
+        opacity: 0;
+        transform: translate(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+@keyframes button-side-anim-back {
+    100%{
+        opacity: 0;
+        transform: translate(10px);
+    }
+    0%{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+@keyframes button-side-click-anim {
+    0%{
+        opacity: 1;
+        transform: scale(1,1) translateX(0);
+    }
+    50%{
+        opacity: 0.25;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(2,0) translateX(-20px);
+    }
+}
+
+.rotate180{
+    rotate: 180deg;
+}

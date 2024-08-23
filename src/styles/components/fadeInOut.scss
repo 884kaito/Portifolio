@@ -1,0 +1,32 @@
+.conteiner {
+  display: inline-block;
+  position: absolute;
+  background-color: black;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  animation: fadeIn-anim 0.6s;
+  animation-fill-mode: both;
+  pointer-events: none;
+
+  &.fadeOut{
+    animation: fadeOut-anim 0.7s;
+  }
+}
+
+@keyframes fadeIn-anim {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut-anim {
+    100% {
+      opacity: 1;
+    }
+    0% {
+      opacity: 0;
+    }
+  }
