@@ -25,7 +25,7 @@ body {
   color: white;
 }
 
-.default-button {
+.default_button {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -40,26 +40,26 @@ body {
   text-shadow: none;
   transition: text-shadow 0.2s, transform 0.4s;
 }
-.default-button .appear-element {
+.default_button .appear_element {
   margin: 10px;
   width: 2em;
   display: inline-block;
   animation: button-side-anim-back 0.2s;
   animation-fill-mode: both;
 }
-.default-button:hover {
+.default_button:hover {
   text-shadow: rgb(255, 255, 255) 0px 0 10px;
   transform: translate(0, -1px);
 }
-.default-button:hover .appear-element {
+.default_button:hover .appear_element {
   animation: button-side-hover-anim 0.4s;
   animation-fill-mode: both;
 }
-.default-button.clicked {
+.default_button.clicked {
   pointer-events: none;
   text-shadow: none;
 }
-.default-button.clicked .appear-element {
+.default_button.clicked .appear_element {
   animation: button-side-click-anim 0.4s;
   animation-fill-mode: both;
 }
@@ -99,4 +99,4 @@ body {
 }
 .rotate180 {
   rotate: 180deg;
-}/*# sourceMappingURL=button.css.map */
+}/*# sourceMappingURL=button.module.css.map */

@@ -1,4 +1,4 @@
-import "../styles/components/button.css";
+import styles from "../styles/components/button.module.css";
 import {useEffect, useRef} from 'react';
 
 export const Button = (props) => {
@@ -15,16 +15,14 @@ export const Button = (props) => {
             button.addEventListener('click', ()=>button.classList.add('clicked'))
             button.addEventListener('click', func)
         }
-        else
-            console.error("button with id '#button' not found")
     }, [])
     
     return (
         <>
-            <button ref={buttonRef} className="default-button">
-                <img className="appear-element" src='./images/components/button-hover.png' alt=""/>
+            <button ref={buttonRef} className={styles.default_button}>
+                <img className={styles.appear_element} src='./images/components/button-hover.png' alt=""/>
                 {text}
-                <img className="appear-element rotate180" src='./images/components/button-hover.png' alt=""/>
+                <img className={styles.appear_element + " " + styles.rotate180} src='./images/components/button-hover.png' alt=""/>
             </button>
         </>
     )

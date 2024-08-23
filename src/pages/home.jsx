@@ -1,4 +1,4 @@
-import "../styles/pages/home.css";
+import styles from "../styles/pages/home.module.css";
 import {Button} from "../components/button";
 import {FadeInOut} from "../components/fadeInOut";
 import { useEffect, useState, useRef } from "react";
@@ -26,7 +26,7 @@ export const Home = () => {
             ref = {fadeRef}
             />
             <div className="centerlize background">
-                <p className='default-title main-title'>Kaito Portfolio</p>
+                <p className={'default-title ' + styles.main_title}>Kaito Portfolio</p>
                 <Button
                 text = "Start"
                 func = {nextPage}/>

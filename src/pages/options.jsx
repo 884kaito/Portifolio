@@ -1,4 +1,4 @@
-import "../styles/pages/options.css";
+import styles from "../styles/pages/options.module.css";
 import {Button} from "../components/button";
 import {FadeInOut} from "../components/fadeInOut";
 import { useEffect, useState, useRef } from "react";
@@ -38,7 +38,7 @@ export const Options = () => {
             ref = {fadeRef}
             />
 
-            <div className="centerlize background option-conteiner">
+            <div className={"centerlize background " + styles.container}>
                 <Button
                 text = "About"
                 func = {aboutFunc}/>

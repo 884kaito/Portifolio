@@ -1,7 +1,7 @@
 @use "default" as *;
 
 
-.default-button{
+.default_button{
     display: flex;
     align-items: center;
     cursor:pointer;
@@ -19,7 +19,7 @@
     text-shadow: none;
     transition: text-shadow 0.2s, transform 0.4s;
 
-    & .appear-element{
+    & .appear_element{
         margin: 10px;
         width: 2em;
         display: inline-block;
@@ -30,7 +30,7 @@
     &:hover{
         text-shadow: rgb(255, 255, 255) 0px 0 10px;
         transform: translate(0, -1px);
-        & .appear-element{
+        & .appear_element{
             animation: button-side-hover-anim 0.4s;
             animation-fill-mode: both;
         }
@@ -40,7 +40,7 @@
         pointer-events: none;
         text-shadow: none;
 
-        & .appear-element{
+        & .appear_element{
             animation: button-side-click-anim 0.4s;
             animation-fill-mode: both;
         }

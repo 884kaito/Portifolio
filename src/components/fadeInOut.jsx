@@ -1,6 +1,6 @@
 import { useEffect, useImperativeHandle, forwardRef } from "react";
 import { useNavigate } from 'react-router-dom';
-import "../styles/components/fadeInOut.css";
+import styles from "../styles/components/fadeInOut.module.css";
 
 export const FadeInOut = forwardRef((props, ref) => {
 
@@ -8,8 +8,8 @@ export const FadeInOut = forwardRef((props, ref) => {
     const navigate = useNavigate();
 
     const fadeOut = (navPage)=>{
-        const conteiner = document.querySelector(".conteiner");
-        conteiner.classList.add("fadeOut");
+        const conteiner = document.querySelector("."+styles.conteiner);
+        conteiner.classList.add(styles.fadeOut);
         setTimeout(()=>navigate(navPage), 700);
     }
 
@@ -20,7 +20,7 @@ export const FadeInOut = forwardRef((props, ref) => {
 
     return(
         <>
-            <div className="conteiner">
+            <div className={styles.conteiner}>
 
             </div>
         </>
