@@ -34,12 +34,10 @@ export const Button = (props) => {
     }, [])
     
     return (
-        <>
-            <button ref={buttonRef} className={styles.default_button}>
-                <img className={styles.appear_element} src='./images/components/button-hover.png' alt=""/>
-                {text}
-                <img className={styles.appear_element + " " + styles.rotate180} src='./images/components/button-hover.png' alt=""/>
-            </button>
-        </>
+        <button ref={buttonRef} className={styles.default_button}>
+            <img className={styles.appear_element} src='./images/components/button-hover.png' alt=""/>
+            {text}
+            <img className={styles.appear_element + " " + styles.rotate180} src='./images/components/button-hover.png' alt=""/>
+        </button>
     )
 }

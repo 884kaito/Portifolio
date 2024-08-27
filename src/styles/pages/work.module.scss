@@ -1,0 +1,27 @@
+.work_conteiner{
+    display:flex;
+    flex-direction: column;
+    width: 45em;
+    height: 20em;
+    justify-content: top;
+    margin-top: 5em;
+    margin-bottom: 3em;
+    overflow-y: auto;
+    &::-webkit-scrollbar{
+        background-image: url("../../../public/images/components/scrollbar.png");
+        background-size: contain; /* A imagem irá cobrir todo o espaço */
+        background-position: center; /* Centraliza a imagem no espaço */
+        background-repeat: no-repeat; /* Evita que a imagem se repita */
+        width: 2em;
+    }
+    &::-webkit-scrollbar-button{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    &::-webkit-scrollbar-thumb{
+        background-image: url("../../../public/images/components/scrollbar-thumb.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 80px;
+    }
+}

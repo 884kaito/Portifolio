@@ -1,0 +1,20 @@
+.work{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.image{
+    width: 18em;
+    height: 11em;
+    background-size: cover;
+    margin: 20px;
+}
+.text_conteiner{
+    display: flex;
+    flex-direction: column;
+    width: 22em;
+    // background-color: aqua;
+}
+.text{
+    text-align: start !important;
+}

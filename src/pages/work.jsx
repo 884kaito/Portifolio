@@ -1,9 +1,10 @@
-import styles from "../styles/pages/contact.module.scss";
+import styles from "../styles/pages/work.module.scss";
 import {Button} from "../components/button";
 import {FadeInOut} from "../components/fadeInOut";
+import {WorkComp} from "../components/workComp";
 import { useEffect, useState, useRef } from "react";
 
-export const Contact = () => {
+export const Work = () => {
 
     const [isNextPage, setIsNextPage] = useState(false);
     const [navPage, setNavPage] = useState("");
@@ -30,42 +31,35 @@ export const Contact = () => {
             />
 
             <div className="centerlize background">
-                {/* Contact */}
-                <h1 className="default-title" style={{marginTop: '3em'}}>Contact</h1>  
+                {/* Works */}
+                <h1 className="default-title" style={{marginTop: '3em'}}>Work</h1>  
                 <img src="/images/components/underline.png" alt="" style={{width: '18em', height: '2px', marginTop: '-1.6em'}}/>
 
-                {/* Link to sites */}
-                <h2 className="default-subtitle" style={{marginTop: '3em'}}>Site</h2>
-                <img src="/images/components/underline.png" alt="" style={{width: '12em', height: '2px', marginTop: '-1.6em'}}/>
-                <div className={styles.buttonConteiner}>
-                    <Button
-                    text = "Github"
-                    isLink = {true}
-                    link = 'https://github.com/kaitokun'
+                <div className={styles.work_conteiner}>
+                    <WorkComp
+                        image = "/images/works/work1.png"
+                        title = "Landing Page for NGO Pão Fraterno"
+                        skill = "React, HTML, CSS, JS"
+                        date = "7/2024"
                     />
-                    <Button
-                    text = "Linkedin"
-                    isLink = {true}
-                    link = 'https://www.linkedin.com/in/kaito-hayashi/'
+                    <WorkComp
+                        image = "/images/works/work1.png"
+                        title = "Landing Page for NGO Pão Fraterno"
+                        skill = "React, HTML, CSS, JS"
+                        date = "7/2024"
                     />
-                </div>
-
-                {/* Go to email */}
-                <h2 className="default-subtitle" style={{marginTop: '1em'}}>Email</h2>
-                <img src="/images/components/underline.png" alt="" style={{width: '12em', height: '2px', marginTop: '-1.6em'}}/>
-                <div className={styles.buttonConteiner}>
-                    <Button
-                    text = "kaito.hayashi@gmail.com"
-                    isLink = {true}
-                    link = 'mailto:kaito.hayashi@gmail.com'
+                    <WorkComp
+                        image = "/images/works/work1.png"
+                        title = "Landing Page for NGO Pão Fraterno"
+                        skill = "React, HTML, CSS, JS"
+                        date = "7/2024"
                     />
-                </div>
-                
-                {/* Telephone number */}
-                <h2 className="default-subtitle" style={{marginTop: '1.2em'}}>Telephone</h2>
-                <img src="/images/components/underline.png" alt="" style={{width: '12em', height: '2px', marginTop: '-1.6em'}}/>
-                <div className={styles.buttonConteiner}>
-                    <p className="default-text" style={{marginTop: '-0em'}}>(55) +11 91960-2002</p>
+                    <WorkComp
+                        image = "/images/works/work1.png"
+                        title = "Landing Page for NGO Pão Fraterno"
+                        skill = "React, HTML, CSS, JS"
+                        date = "7/2024"
+                    />
                 </div>
 
                 {/* Back button */}
