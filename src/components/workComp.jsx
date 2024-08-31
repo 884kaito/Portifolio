@@ -8,8 +8,6 @@ export const WorkComp = (props) => {
     const skill = props.skill
     const date = props.date
 
-   
-    console.log(image)
     return (
         <div className={styles.work}>
             <div className={styles.image} style={{backgroundImage: image}}/>

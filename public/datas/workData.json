@@ -1,0 +1,31 @@
+{
+    "Pao_Fraterno": {
+        "title": "Landing page for Pão Fraterno",
+        "skill": "React, HTML, CSS, JS",
+        "data": "7/2024",
+
+        "short_title": "Pão Fraterno",
+        "image": "/images/works/work1.png",
+        "links": {
+            "0":{
+                "name": "site",
+                "link": "https://www.notion.so/HTML-CSS-JS-156d77f41cc74e229e27848b9f633e8a#50543800ba104218a0130a99bd2bb510"
+            },
+            "1":{
+                "name": "github",
+                "link": "https://github.com/Vit0rSilveira/Eng-Software/tree/main"
+            }
+        },
+        "period": "1/2024 - 7/2024",
+        "collaboration": "prototype design, frontend/backend programming",
+        "description": ["This is a project focused on creating a landing page for an NGO using React.",
+            "This is a project focused on creating a landing page for an NGO using React."]
+    },
+    
+    "project2": {
+        "title": "E-commerce Platform",
+        "description": "A comprehensive e-commerce platform built with React and Node.js.",
+        "date": "June 2024",
+        "tech": ["React", "Node.js", "Express", "MongoDB"]
+    }
+}

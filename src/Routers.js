@@ -3,7 +3,7 @@ import {Home} from './pages/home';
 import {Options} from './pages/options';
 import {Contact} from './pages/contact';
 import {Work} from './pages/work';
-// import { NoteDetailPage } from './pages/NoteDetailPage';
+import { WorkDetail } from './pages/workDetail';
 // import { NotFoundPage } from './pages/NotFoundPage';
 
 export const Routers = () => {
@@ -14,7 +14,7 @@ export const Routers = () => {
                 <Route path='/options' element = {<Options/>}/>
                 <Route path='/contact' element = {<Contact/>}/>
                 <Route path='/work' element = {<Work/>}/>
-                {/* <Route path='/notes/:noteId' element = {<NoteDetailPage/>}/> */}
+                <Route path='/workDetail/:workName' element = {<WorkDetail/>}/>
                 {/* <Route path='*' element = {<NotFoundPage/>}/> */}
             </Routes>
         </Router>

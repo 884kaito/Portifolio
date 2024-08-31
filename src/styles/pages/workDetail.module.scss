@@ -1,0 +1,19 @@
+.work_conteiner{
+    display: flex;
+    flex-direction: column;
+    width: 40em;
+    height: 35em;
+    align-items: center;
+    margin-top: 5em;
+}
+.image{
+    width: 80%;
+}
+.text_style{
+    text-align: start;
+    margin: 0.5em 1em;
+}
+.description_style{
+    text-align: start;
+    margin: 0.2em 1em;
+}

@@ -39,3 +39,27 @@ body {
     font-family: "Gilda display", sans-serif;
     font-size: 1.25em;
 }
+
+//scrollbar
+.default-scrollbar{
+    justify-content: top;
+    overflow-y: auto !important;
+
+    &::-webkit-scrollbar{
+        background-image: url("../../../public/images/components/scrollbar.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat; 
+        width: 2em;
+    }
+    &::-webkit-scrollbar-button{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    &::-webkit-scrollbar-thumb{
+        background-image: url("../../../public/images/components/scrollbar-thumb.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 80px;
+    }
+}

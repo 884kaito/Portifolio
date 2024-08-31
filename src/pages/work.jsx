@@ -9,8 +9,7 @@ export const Work = () => {
     const [isNextPage, setIsNextPage] = useState(false);
     const [navPage, setNavPage] = useState("");
     const fadeRef = useRef(null);
-    
-    
+
     //vai para proxima pagina
     useEffect(()=>{
         if(isNextPage)

@@ -7,11 +7,14 @@
     margin-top: 5em;
     margin-bottom: 3em;
     overflow-y: auto;
+    position: relative;
+
+    // scrollbar
     &::-webkit-scrollbar{
         background-image: url("../../../public/images/components/scrollbar.png");
-        background-size: contain; /* A imagem irá cobrir todo o espaço */
-        background-position: center; /* Centraliza a imagem no espaço */
-        background-repeat: no-repeat; /* Evita que a imagem se repita */
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat; 
         width: 2em;
     }
     &::-webkit-scrollbar-button{
