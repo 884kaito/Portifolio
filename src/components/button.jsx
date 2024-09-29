@@ -14,7 +14,7 @@ export const Button = (props) => {
     // set button click function
     var i = 0;
     useEffect(()=>{
-        if(i!=0) return
+        if(i!==0) return
         i++
 
         const button = buttonRef.current
@@ -35,9 +35,9 @@ export const Button = (props) => {
     
     return (
         <button ref={buttonRef} className={styles.default_button}>
-            <img className={styles.appear_element} src='./images/components/button-hover.png' alt=""/>
+            <img className={styles.appear_element} src='/images/components/button-hover.png' alt=""/>
             {text}
-            <img className={styles.appear_element + " " + styles.rotate180} src='./images/components/button-hover.png' alt=""/>
+            <img className={styles.appear_element + " " + styles.rotate180} src='/images/components/button-hover.png' alt=""/>
         </button>
     )
 }

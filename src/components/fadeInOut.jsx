@@ -1,4 +1,4 @@
-import { useEffect, useImperativeHandle, forwardRef } from "react";
+import { useImperativeHandle, forwardRef } from "react";
 import { useNavigate } from 'react-router-dom';
 import styles from "../styles/components/fadeInOut.module.scss";
 

@@ -14,7 +14,7 @@ export const Options = () => {
     useEffect(()=>{
         if(isNextPage)
             fadeRef.current.fadeOut(navPage);
-    }, [isNextPage])
+    }, [isNextPage, navPage])
 
     //funcoes das botoes
     const aboutFunc = ()=>{

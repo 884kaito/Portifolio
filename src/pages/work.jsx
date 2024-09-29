@@ -14,12 +14,35 @@ export const Work = () => {
     useEffect(()=>{
         if(isNextPage)
             fadeRef.current.fadeOut(navPage);
-    }, [isNextPage])
+    }, [isNextPage, navPage])
 
     //funcoes das botoes
     const backFunc = ()=>{
         setNavPage(-1);
         setIsNextPage(true);
+    }
+    const workFunc = (directory)=>{
+        setNavPage('/workDetail/' + directory);
+        setIsNextPage(true);
+    }
+
+    const [works, setWork] = useState(null);
+    //pegando dados do work 
+    useEffect(()=>{
+        fetch('/datas/workData.json')
+            .then(response => response.json())
+            .then(data => {
+                setWork(data);
+            })
+            .catch(err => {
+                console.error("Error fetching the works data:", err);
+                setWork(null);
+            })
+    }, []);
+
+    //caso nao achar
+    if(!works){
+        return <h2>Work not found</h2>;
     }
 
     return (
@@ -34,7 +57,23 @@ export const Work = () => {
                 <h1 className="default-title" style={{marginTop: '3em'}}>Work</h1>  
                 <img src="/images/components/underline.png" alt="" style={{width: '18em', height: '2px', marginTop: '-1.6em'}}/>
 
+                
                 <div className={styles.work_conteiner}>
+                    {Object.keys(works).map((key)=>{
+                        const work = works[key]
+                        return(
+                            <WorkComp
+                                image = {work.image}
+                                title = {work.title}
+                                skill = {work.skill}
+                                date = {work.data}
+                                directory = {work.directory}
+                                func = {workFunc}
+                            />
+                        )
+                    })}
+
+                    {/* Colocado somente para teste */}
                     <WorkComp
                         image = "/images/works/work1.png"
                         title = "Landing Page for NGO Pão Fraterno"
@@ -47,18 +86,7 @@ export const Work = () => {
                         skill = "React, HTML, CSS, JS"
                         date = "7/2024"
                     />
-                    <WorkComp
-                        image = "/images/works/work1.png"
-                        title = "Landing Page for NGO Pão Fraterno"
-                        skill = "React, HTML, CSS, JS"
-                        date = "7/2024"
-                    />
-                    <WorkComp
-                        image = "/images/works/work1.png"
-                        title = "Landing Page for NGO Pão Fraterno"
-                        skill = "React, HTML, CSS, JS"
-                        date = "7/2024"
-                    />
+
                 </div>
 
                 {/* Back button */}
