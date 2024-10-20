@@ -4,6 +4,7 @@ import {Options} from './pages/options';
 import {Contact} from './pages/contact';
 import {Work} from './pages/work';
 import { WorkDetail } from './pages/workDetail';
+import {About} from './pages/about';
 // import { NotFoundPage } from './pages/NotFoundPage';
 
 export const Routers = () => {
@@ -15,6 +16,7 @@ export const Routers = () => {
                 <Route path='/contact' element = {<Contact/>}/>
                 <Route path='/work' element = {<Work/>}/>
                 <Route path='/workDetail/:workName' element = {<WorkDetail/>}/>
+                <Route path='/about' element = {<About/>}/>
                 {/* <Route path='*' element = {<NotFoundPage/>}/> */}
             </Routes>
         </Router>

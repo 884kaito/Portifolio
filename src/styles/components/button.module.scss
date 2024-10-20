@@ -19,11 +19,11 @@
     transition: text-shadow 0.2s, transform 0.4s;
 
     & .appear_element{
-        margin: 10px;
+        margin: 10px 8px;
         width: 2em;
         display: inline-block;
         animation: button-side-anim-back 0.2s;
-        animation-fill-mode: both;
+        animation-fill-mode: forwards;
     }
 
     &:hover{
@@ -31,7 +31,7 @@
         transform: translate(0, -1px);
         & .appear_element{
             animation: button-side-hover-anim 0.4s;
-            animation-fill-mode: both;
+            animation-fill-mode: forwards;
         }
     }
 
@@ -41,7 +41,7 @@
 
         & .appear_element{
             animation: button-side-click-anim 0.4s;
-            animation-fill-mode: both;
+            animation-fill-mode: forwards;
         }
     }
 }
